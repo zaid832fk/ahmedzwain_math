@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <title>لوحة الطالب</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+        <aside class="sidebar">
+            <h2>👨‍🎓 الطالب</h2>
+            <ul>
+                <li onclick="showSection('home')">🏠 الرئيسية</li>
+                <li onclick="showSection('classes')">📚 الفصول</li>
+                <li onclick="logout()">🚪 تسجيل خروج</li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <section id="home" class="section active">
+                <h1>مرحبًا بك في منصة أحمد زوين</h1>
+                <p>اختر فصلًا لمتابعة المحاضرات والملفات.</p>
+            </section>
+
+            <section id="classes" class="section">
+                <h1>📚 الفصول المتاحة</h1>
+
+                <select id="selectClassStudent" onchange="loadClassContent()"></select>
+
+                <h2>🎥 المحاضرات</h2>
+                <ul id="lectureListStudent"></ul>
+
+                <h2>📄 الملفات</h2>
+                <ul id="fileListStudent"></ul>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/student.js"></script>
+</body>
+<li onclick="showSection('messages')">💬 الرسائل</li>
+
+<section id="messages" class="section">
+    <h1>💬 الرسائل</h1>
+    <textarea id="messageContentStudent" placeholder="اكتب رسالتك للأستاذ"></textarea>
+    <button onclick="sendMessageStudent()">📤 إرسال</button>
+
+    <h2>المحادثة</h2>
+    <ul id="chatListStudent"></ul>
+</section>
+
+</html>

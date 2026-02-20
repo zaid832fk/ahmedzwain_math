@@ -1,0 +1,39 @@
+<section id="classes" class="section">
+    <h1>📚 إدارة الفصول</h1>
+
+    <input id="className" placeholder="اسم الفصل">
+    <button onclick="addClass()">➕ إضافة فصل</button>
+
+    <ul id="classList"></ul>
+
+    <hr>
+
+    <h2>🎥 رفع محاضرة</h2>
+    <select id="selectClass"></select>
+    <input id="lectureTitle" placeholder="عنوان المحاضرة">
+    <input type="file" id="videoFile">
+    <button onclick="uploadLecture()">⬆️ رفع الفيديو</button>
+
+    <hr>
+    <li onclick="showSection('messages')">💬 الرسائل</li>
+
+    <section id="messages" class="section">
+        <h1>💬 الرسائل</h1>
+        <input id="studentEmail" placeholder="البريد الإلكتروني للطالب">
+        <textarea id="messageContent" placeholder="اكتب الرسالة هنا"></textarea>
+        <button onclick="sendMessage()">📤 إرسال</button>
+
+        <h2>المحادثة</h2>
+        <ul id="chatList"></ul>
+
+    </section>
+    <h2>📄 رفع ملفات PDF</h2>
+    <select id="selectClassFile"></select>
+    <input id="fileTitle" placeholder="عنوان الملف">
+    <input type="file" id="pdfFile">
+    <button onclick="uploadFile()">⬆️ رفع PDF</button>
+
+    <ul id="fileList"></ul>
+
+    <ul id="lectureList"></ul>
+</section>
